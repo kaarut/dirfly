@@ -538,4 +538,9 @@ footer {
     .article-grid {
         grid-template-columns: 1fr;
     }
+
+
+    .calculator-container {
+        padding: 0px !important;
+    }
 }
