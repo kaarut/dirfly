@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTO Calculator | Accrual Calculator for Paid Time Off</title>
+    <meta name="description" content="Use our free PTO calculator to accurately determine employee paid time off accruals. Perfect for small businesses managing sick time, vacation, and holiday time off.">
+    <meta name="keywords" content="PTO calculator, PTO accrual calculator, paid time off calculator, employee time off tracker">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.dirfly.com/pto-calculator">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "PTO Calculator",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+        "@type": "Offer",
+        "price": "0"
+        },
+        "description": "Free online tool for calculating Paid Time Off (PTO) accruals. Ideal for businesses managing employee vacation time, sick leave, and personal days.",
+        "featureList": [
+        "Accurate PTO accrual calculations",
+        "Multiple accrual methods support",
+        "Customizable settings",
+        "Real-time PTO balance updates"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="navbar-logo">Dirfly</a>
+            <ul class="navbar-menu">
+                <li><a href="../index.html#features">Features</a></li>
+                <li><a href="../index.html#benefits">Benefits</a></li>
+                <li><a href="../index.html#how-it-works">How It Works</a></li>
+                <li><a href="../index.html#faq">FAQ</a></li>
+                <li><a href="calc.html" class="active">PTO Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="calculator-header">
+        <h1>PTO Calculator</h1>
+        <p>Accurately calculate employee paid time off accruals with our free tool</p>
+    </header>
+
+    <main class="calculator-container">
+        <section class="calculator-section">
+            <h2>Calculate PTO Accrual</h2>
+            <p>Use this calculator to determine where an employee is in their PTO cycle, including sick time, vacation, and holiday time off.</p>
+            
+            <div class="pto-result">
+                <h3>0 hours of PTO</h3>
+            </div>
+
+            <form id="pto-form" class="pto-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="start-date">Start Date:</label>
+                        <input type="date" id="start-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="end-date">End Date:</label>
+                        <input type="date" id="end-date" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="previous-balance">Previous Balance (hours):</label>
+                        <input type="number" id="previous-balance" placeholder="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="accrue-rate">Accrue Rate:</label>
+                        <input type="number" id="accrue-rate" placeholder="1" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="accrue-frequency">Accrue Frequency:</label>
+                        <select id="accrue-frequency" required>
+                            <option value="hour">Per Hour Worked</option>
+                            <option value="week">Per Week Worked</option>
+                            <option value="month">Per Month Worked</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="max-hours">Max Hours:</label>
+                        <input type="number" id="max-hours" placeholder="No limit">
+                    </div>
+                </div>
+                <div class="hourly-field">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="hours-per-day">Hours Per Day:</label>
+                            <input type="number" id="hours-per-day" value="8">
+                        </div>
+                        <div class="form-group">
+                            <label for="days-off">Days Off:</label>
+                            <input type="number" id="days-off" placeholder="0">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Days Worked:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="days-worked" value="sun"> Sun</label>
+                            <label><input type="checkbox" name="days-worked" value="mon" checked> Mon</label>
+                            <label><input type="checkbox" name="days-worked" value="tue" checked> Tue</label>
+                            <label><input type="checkbox" name="days-worked" value="wed" checked> Wed</label>
+                            <label><input type="checkbox" name="days-worked" value="thu" checked> Thu</label>
+                            <label><input type="checkbox" name="days-worked" value="fri" checked> Fri</label>
+                            <label><input type="checkbox" name="days-worked" value="sat"> Sat</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="cta">Calculate PTO</button>
+            </form>
+
+            <div class="calculation-note">
+                <h3>What to consider</h3>
+                <p>This calculator assumes each workday consists of the exact number of hours specified in the "Hours Per Day" field. In practice, daily work hours may vary slightly, which could affect the precise PTO accrual. For the most accurate results, consider using actual time card data if available.</p>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions about PTO Calculation</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>What is PTO and why is it important to calculate accurately?</h3>
+                    <p>PTO (Paid Time Off) is a policy that combines vacation, sick time, and personal time into a single bank of days for employees to use when they take paid time away from work. Accurate calculation is crucial for maintaining fair employee benefits, ensuring compliance with labor laws, and managing workforce planning effectively.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How does PTO accrual typically work?</h3>
+                    <p>PTO accrual can vary based on company policy, but it typically accumulates based on hours worked or at a set rate per pay period. Common accrual methods include:</p>
+                    <ul>
+                        <li>Per hour worked (e.g., 0.05 hours of PTO for every hour worked)</li>
+                        <li>Per day worked (e.g., 0.5 days of PTO for every day worked)</li>
+                        <li>Per week worked (e.g., 2 hours of PTO for every week worked)</li>
+                        <li>Per month worked (e.g., 1 day of PTO for every month worked)</li>
+                    </ul>
+                </div>
+                <div class="faq-item">
+                    <h3>What factors can affect PTO accrual rates?</h3>
+                    <p>Several factors can influence PTO accrual rates:</p>
+                    <ul>
+                        <li>Length of employment (accrual rates often increase with tenure)</li>
+                        <li>Full-time vs. part-time status</li>
+                        <li>Job level or position within the company</li>
+                        <li>State or local laws regarding paid time off</li>
+                        <li>Company policy on maximum PTO accrual (cap limits)</li>
+                    </ul>
+                </div>
+                <div class="faq-item">
+                    <h3>How can small businesses benefit from using a PTO calculator?</h3>
+                    <p>Small businesses can greatly benefit from using a PTO calculator by:</p>
+                    <ul>
+                        <li>Ensuring accurate and fair PTO accrual for all employees</li>
+                        <li>Saving time on manual calculations and reducing errors</li>
+                        <li>Improving transparency in PTO policies</li>
+                        <li>Facilitating better absence management and workforce planning</li>
+                        <li>Helping maintain compliance with labor laws and company policies</li>
+                    </ul>
+                </div>
+                <div class="faq-item">
+                    <h3>How often should PTO balances be calculated and updated?</h3>
+                    <p>PTO balances should ideally be calculated and updated each pay period to ensure accuracy. This allows for real-time tracking of accruals and usage, helping both employees and employers stay informed about available time off.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Dirfly</h4>
+                <p>Dirfly provides innovative tools and solutions to simplify HR processes for businesses of all sizes.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html#features">Features</a></li>
+                    <li><a href="../index.html#benefits">Benefits</a></li>
+                    <li><a href="../index.html#how-it-works">How It Works</a></li>
+                    <li><a href="../index.html#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@dirfly.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Dirfly. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="calc.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
