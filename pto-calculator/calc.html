@@ -59,6 +59,8 @@
                 <h3>0 hours of PTO</h3>
             </div>
 
+            <div id="error-banner" class="error-banner" style="display: none;"></div>
+
             <form id="pto-form" class="pto-form">
                 <div class="form-row">
                     <div class="form-group">
@@ -84,6 +86,7 @@
                     <div class="form-group">
                         <label for="accrue-frequency">Accrue Frequency:</label>
                         <select id="accrue-frequency" required>
+                            <option value=""></option>
                             <option value="hour">Per Hour Worked</option>
                             <option value="week">Per Week Worked</option>
                             <option value="month">Per Month Worked</option>
@@ -118,7 +121,8 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="cta">Calculate PTO</button>
+                <!-- Replace the existing button with this one -->
+                <button type="button" id="calculate-pto" class="cta">Calculate PTO</button>
             </form>
 
             <div class="calculation-note">

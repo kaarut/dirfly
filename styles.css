@@ -245,7 +245,7 @@ footer {
 
 /* PTO Calculator styles */
 .calculator-header {
-    background: linear-gradient(to right, #2c3e50, #3498db);
+    background: linear-gradient(to right, #34495e, #2c3e50);
     color: white;
     padding: 60px 20px;
     text-align: center;
@@ -268,10 +268,10 @@ footer {
 
 .calculator-section {
     flex: 1 1 600px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     border-radius: 10px;
     padding: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .faq-section {
@@ -283,12 +283,13 @@ footer {
 }
 
 .pto-result {
-    background-color: #4CAF50;
+    background-color: #3498db;
     color: white;
     padding: 1rem;
     text-align: center;
     border-radius: 5px;
     margin-bottom: 2rem;
+    font-size: 1.2em;
 }
 
 .form-group {
@@ -340,9 +341,17 @@ footer {
 .form-group input,
 .form-group select {
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
     border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
 
 .checkbox-group {
@@ -442,4 +451,28 @@ footer {
 
 .footer-bottom a:hover {
     color: #0073e6;
+}
+
+/* Added styles for dynamic form field visibility */
+.hourly-field {
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    max-height: 1000px; /* Adjust this value based on the maximum height of your hourly fields */
+    opacity: 1;
+}
+
+.hourly-field.hidden {
+    max-height: 0;
+    opacity: 0;
+}
+
+/* Add these styles for the error banner */
+.error-banner {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
 }
