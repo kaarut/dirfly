@@ -15,4 +15,4 @@ Key Features:
 
 **Multiple Time-off Types:** Easily calculate sick leave, vacation, holidays, and more.
 
-Learn more at [https://dirfly.com](dirfly.com)
+Learn more at [https://dirfly.com](https://dirfly.com)
